@@ -1,0 +1,93 @@
+{% extends "home/base.html" %}
+{% block content %}
+
+	<h3> Login Your Account!! </h3><hr>
+
+	<form method="POST">
+		{% csrf_token %}
+		Username<br><input type="text" name="username" placeholder="Enter your username"><br><br>
+		Password<br><input type="password" name="password" placeholder="Enter your Password"><br><br>
+		<input type="submit" name="">
+	</form><br><br>
+<div  class="border-top pt 3">
+	
+	<a href="/register">Already have an account?
+	</a>
+	
+</div>
+
+<div>
+	{% for message in messages %}
+	<h3>{{message}}</h3>
+	{% endfor %}
+</div>
+<style >/* css for Login */
+	
+a {
+  color: #92badd;
+  display:inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+
+
+
+input[type=text] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+
+
+input[type=text]:placeholder {
+  color: #cccccc;
+}
+input[type=password] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+
+
+input[type=password]:placeholder {
+  color: #cccccc;
+}
+
+
+</style>
+
+
+{% endblock %}

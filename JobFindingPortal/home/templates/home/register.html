@@ -1,0 +1,118 @@
+{% extends "home/base.html" %}
+{% block content %}
+	<h4><center>Register your account here</center></h4><hr>
+	<form method="POST">
+		<div>
+			{% for message in messages %}
+			<h3>{{message}}</h3>
+			{% endfor %}
+		</div>
+		{% if error %}
+		<div>
+			{{error}}
+		</div>
+		{% endif %}
+		{% csrf_token %}
+		First Name <br><input type="text" name="first_name" placeholder="Enter your first Name"><br><br>
+		Last Name <br><input type="text" name="last_name" placeholder="Enter your last Name"><br><br>
+		Username <br><input type="text" name="username" placeholder="Enter your username Name"><br><br>
+		Email <br><input type="email" name="email" placeholder="Enter your email"><br><br>
+		Password<br><input type="password" name="password1" placeholder="Enter your password"><br><br>
+		Re-password <br><input type="password" name="password2" placeholder="Re-Enter your password"><br><br>
+		<button type="submit" name="">  Register  </button> 
+</form><br>
+<div  class="border-top pt 3">
+	
+	<a href="/login">Already have an account?
+	</a>
+	
+</div>
+<style >/* css for Register */
+	a {
+  color: #92badd;
+  display:inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+
+
+
+input[type=text] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+
+
+input[type=text]:placeholder {
+  color: #cccccc;
+}
+input[type=password] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+input[type=email] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+
+
+input[type=password]:placeholder {
+  color: #cccccc;
+}
+
+
+</style>
+
+
+{% endblock %}

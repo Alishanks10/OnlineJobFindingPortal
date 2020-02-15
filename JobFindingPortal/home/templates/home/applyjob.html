@@ -1,0 +1,109 @@
+{% extends "home/base.html" %}
+{% block content %} 
+	<h1>Fill Up this form to apply for the job.</h1><hr>
+	  <form method="post" action="/applyJob_detail/">
+      {% csrf_token %}
+      First Name<br><input type="text" name="first_name" placeholder="Enter your First name"><br><br>
+      Last Name<br><input type="text" name="last_name" placeholder="Enter your Last name"><br><br>
+      Email<br><input type="email" name="email" placeholder="Enter your Email address"><br><br>
+      Age<br><input type="text" name="age" placeholder="Enter your Age"><br><br>
+      Phone Number<br><input type="text" name="PhoneNo" placeholder="Enter Your Phone Number"><br><br>
+      Address<br><input type="text" name="Address" placeholder="Enter Your Address"><br><br>
+      Work Experience<br><input type="text" name="workexperience" placeholder="Enter Your Work Experience"><br><br>
+	Extra Skills<br><input type="text" name="otherskills" placeholder="Enter your extra skills"><br><br>
+      Hobby <br><input type="text" name="hobby" placeholder="Enter Your Hobby"><br><br>
+      
+      <br><input type="submit">
+  </form>
+<div>
+      {% for message in messages %}
+      <h3>{{message}}</h3>
+      {% endfor %}
+</div>
+<style > /* css for applyjob */
+      a {
+  color: #92badd;
+  display:inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+
+
+
+input[type=text] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+
+
+input[type=text]:placeholder {
+  color: #cccccc;
+}
+input[type=password] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+input[type=email] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+
+
+input[type=password]:placeholder {
+  color: #cccccc;
+}
+
+
+</style>
+{% endblock %} 
